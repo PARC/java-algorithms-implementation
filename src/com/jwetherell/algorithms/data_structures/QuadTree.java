@@ -135,6 +135,13 @@ public abstract class QuadTree<G extends QuadTree.XYPoint> {
         }
 
         /**
+         * Add a node.
+         */
+        public boolean insert(P node) {
+            return root.insert(node);
+        }
+
+        /**
          * {@inheritDoc}
          */
         @Override
