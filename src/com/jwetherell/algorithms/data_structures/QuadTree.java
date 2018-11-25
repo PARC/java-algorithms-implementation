@@ -735,7 +735,7 @@ public abstract class QuadTree<G extends QuadTree.XYPoint> {
         }
     }
 
-    public static class XYPoint implements Comparable<Object> {
+    public static class XYPoint implements Comparable<XYPoint> {
 
         protected double x = Float.MIN_VALUE;
         protected double y = Float.MIN_VALUE;
@@ -788,7 +788,7 @@ public abstract class QuadTree<G extends QuadTree.XYPoint> {
          * {@inheritDoc}
          */
         @Override
-        public int compareTo(Object o) {
+        public int compareTo(XYPoint o) {
             if ((o instanceof XYPoint)==false)
                 throw new RuntimeException("Cannot compare object.");
 
@@ -925,7 +925,7 @@ public abstract class QuadTree<G extends QuadTree.XYPoint> {
          * {@inheritDoc}
          */
         @Override
-        public int compareTo(Object o) {
+        public int compareTo(XYPoint o) {
             if ((o instanceof AxisAlignedBoundingBox)==false)
                 throw new RuntimeException("Cannot compare object.");
 
